@@ -1,0 +1,127 @@
+/* Basic CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: sans-serif;
+  }
+  
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  ul li {
+    list-style: none;
+    padding-top: 15px;
+    font-weight: bold;
+  }
+  
+  .layout-container {
+    height: 100svh;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 4fr;
+  }
+  .layout-container div {
+    border: 1px solid black;
+  }
+
+  .sidebar {
+    height: 100%;
+    grid-area: 1/1/3/2;
+    background-color: cornflowerblue;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+.sidebar > * {
+    margin:20px 25px;
+}
+.nav {
+grid-area: 1/2/2/3;
+}
+
+.main {
+grid-area: 2/2/3/3;
+}
+
+.main {
+height: 100%;
+display: grid;
+grid-template-columns: 3fr 1fr;
+
+}
+
+.main h2 {
+    margin-left: 2svh;
+    margin-top: 1svh
+}
+
+.main-left {
+    display: flex;
+    flex-direction: column;
+}
+.main-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.main-cards-container {
+max-width: 65svh;
+min-height: 45svh;
+margin: 1em auto;
+flex: auto;
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+grid-gap: 20px;
+}
+
+.main-right > div {
+    min-height: 15svh;
+    min-width: 80%;
+    margin: 1em auto;
+    flex: auto;
+}
+
+.nav {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    margin: 0px 3svh;
+}
+
+.nav div {
+    display: flex;
+    justify-content: space-between;
+}
+.nav div > * {
+    display: flex;
+    align-items: center;
+}
+.nav input[type=search] {
+    width: 35svh; /* Adjust width as needed */
+    max-width: 500px; /* Controls maximum width */
+    padding: 10px 15px; /* Adds inner spacing */
+    
+    border: none; /* Removes default border */
+    border-radius: 25px; /* Creates the rounded shape */
+    
+    background-color: #E5EAF0; /* Light grey-blue background */
+    
+    font-size: 16px; /* Adjusts text size */
+    outline: none; /* Removes the focus outline */
+}
+
+.right-lower-nav {
+    gap: 3svh;
+}
